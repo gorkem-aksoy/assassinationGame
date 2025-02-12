@@ -40,6 +40,10 @@ Bu proje, Unity kullanılarak geliştirilen 3D third-person shooter türünde bi
 ## İletişim
 Herhangi bir sorunuz için benimle iletişime geçebilirsiniz.
 
+## Lisans
+Bu proje [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) lisansı altında lisanslanmıştır.
+
+
 ---
 ![1](https://github.com/user-attachments/assets/e6140a6c-f27a-4078-b87a-0c0b4229f4c4)
 ![2](https://github.com/user-attachments/assets/0d5d1359-7cdf-48a7-80e4-2623e30fa524)
