@@ -11,9 +11,10 @@ public class subMachine : MonoBehaviour
     public float menzil;
     int kalanMermiSayisi;
     public int sarjorKapasitesi = 5;
-    int toplamMermiSayisi = 10;
+    int toplamMermiSayisi = 150;
     public TextMeshProUGUI kalanMermiText;
     public TextMeshProUGUI toplamMermiText;
+    float darbeGucu = 15;
 
     [Header("Sesler")]
     public AudioSource[] sesler;
@@ -78,10 +79,16 @@ public class subMachine : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(benimCam.transform.position, benimCam.transform.forward, out hit, menzil))
         {
+            if (hit.transform.gameObject.CompareTag("dusman"))
+            {
+                Instantiate(efektler[2], hit.point, Quaternion.LookRotation(hit.normal));
+                hit.transform.gameObject.GetComponent<dusman>().saglikDurumu(darbeGucu);
+            }
+            else
+            {
+                Instantiate(efektler[1], hit.point, Quaternion.LookRotation(hit.normal));
+            }
 
-            Instantiate(efektler[1], hit.point, Quaternion.LookRotation(hit.normal));
-            Debug.Log("ates edildi");
-            Debug.Log(hit.transform.gameObject.name);
         }
     }
 
